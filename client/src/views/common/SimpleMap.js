@@ -7,6 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const K_SIZE = 55;
 
+const MAPS_KEY = process.env.REACT_APP_AND_SERVER_GOOGLE_MAPS;
+
 const styles = () => ({
   markerWrap: {},
   markerCenter: {
@@ -119,7 +121,7 @@ class SimpleMap extends Component {
       // Important! Always set the container height explicitly
       <div style={{ height: '80vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyCKSxjOsN5bYFi9QtYqbrLoPtknm8yr5E0' }}
+          bootstrapURLKeys={{ key: MAPS_KEY }}
           defaultCenter={center}
           defaultZoom={zoom}
           hoverDistance={K_SIZE / 2}

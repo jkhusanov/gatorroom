@@ -8,5 +8,5 @@ module.exports = {
   googleClientID: process.env.GOOGLE_CLIENT_ID,
   googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
   cookieKey: process.env.COOKIE_KEY,
-  googleLatLong: process.env.GOOGLE_MAPS,
+  googleLatLong: process.env.REACT_APP_AND_SERVER_GOOGLE_MAPS,
 };
