@@ -161,7 +161,7 @@ class ListingLocationForm extends React.Component {
 
   render() {
     // const { classes, fetchListingUpload } = this.props;
-    const { classes, auth } = this.props;
+    const { classes } = this.props;
     const { streetAddress, city, zip, bedroom, bathroom, kitchen, price, description } = this.state;
     return (
       <Grid container spacing={24} className={classes.gridContainer}>

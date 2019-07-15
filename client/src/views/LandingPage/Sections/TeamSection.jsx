@@ -78,7 +78,7 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Jakhongir Khusanov
                   <br />
-                  <small className={classes.smallTitle}>Full Stack Fellow</small>
+                  <small className={classes.smallTitle}>Frontend Lead/Full Stack Fellow</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
@@ -112,7 +112,9 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Michael McDonald Tran
                   <br />
-                  <small className={classes.smallTitle}>Git Master/Full Stack Fellow</small>
+                  <small className={classes.smallTitle}>
+                    Backend Lead/Git Master/Full Stack Fellow
+                  </small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
@@ -149,7 +151,7 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Feona Mae Lao Garcia
                   <br />
-                  <small className={classes.smallTitle}>Scrum Master/Front End Fellow</small>
+                  <small className={classes.smallTitle}>Scrum Master/Frontend Fellow</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
@@ -185,7 +187,7 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Carlos Velasco
                   <br />
-                  <small className={classes.smallTitle}>Back End Fellow</small>
+                  <small className={classes.smallTitle}>Backend Fellow</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
@@ -251,7 +253,7 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   David Carl Hernandez
                   <br />
-                  <small className={classes.smallTitle}>Front End Fellow</small>
+                  <small className={classes.smallTitle}>Frontend Fellow</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
