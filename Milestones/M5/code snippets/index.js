@@ -99,15 +99,18 @@ app.route('/api/upload').post((req, res) => {
   // Add images' names to database row
   req.busboy.on('field', async (fieldname, value) => {
     try {
-      await Listing.update({
-        image_1: fileName[0],
-        image_2: fileName[1],
-        image_3: fileName[2],
-      }, {
-        where: {
-          listing_id: value,
+      await Listing.update(
+        {
+          image_1: fileName[0],
+          image_2: fileName[1],
+          image_3: fileName[2],
         },
-      });
+        {
+          where: {
+            listing_id: value,
+          },
+        }
+      );
       // res.send('Done');
       console.log('Added images to database');
       fileName.length = 0;
@@ -196,5 +199,5 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 // }
-const PORT = process.env.PORT || 1337;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT);
