@@ -1,12 +1,59 @@
-# csc648-sp19-Team103
+# GatorRoom - real estate fullstack capstone project
 
-# This base repo is for Dr. HyoJung Song Class.
+<p align="center">
+  <a href="https://gatorroom.herokuapp.com">
+    <img alt="GatorRoom" src="client/public/gatrorroom.png" width="250">
+  </a>
+</p>
 
-## Please do the following steps before completing Milestone 0.
-1. Change the name of the repo from csc648-sp19-Team1NN. All that needs to chanage is the 1NN to your respective team number. Team numbers whos value is less than 10, please pad with a 0. Ex team 1 is Team101 team 11 is Team111. Please make sure to also remove the username from the repo as well.
+<h3 align="center">
+  This repo is home for our capstone project in CS class at SFSU.
+</h3>
 
-1. PLEASE REMOVE THE USERNAME FROM THE REPO!!!
+## My contribution to it
 
-2. Add ALL members of your team to this repo. For it to count, they must ACCEPT the invite.
+**Frontend lead & fullstack developer**
 
-3. Please make sure your instructor is also added a collaborator.
+- System design and connection between frontend and backend.
+- Implement major user stories.
+- Deploy on Google Cloud Engine in collaboration with six other students.
+
+## Tech Stack
+
+- React, Redux, JavaScript ES6+
+- Node.js, Express, MySQL, Sequelize
+- Google Cloud Platform, Ubuntu, Git, Circle CI
+
+## Demo
+
+- Users can signup with their google accounts.
+- Create and upload new listings with images
+- Search by city and zip code
+- See listing details with pictures and contact information
+- Admins can approve each new listing before they go live
+
+### [Try it on heroku](https://gatorroom.herokuapp.com) (coming soon!)
+
+![Demo](https://github.com/jkhusanov/gatorroom/blob/master/Milestones/Demo/Demo.gif)
+
+#### Screenshot
+
+<img src="./Milestones/Demo/1.png">
+
+## Getting started
+
+**Assuming you installed and configured (including keys, database) all the tools and services above.**
+
+```
+git clone https://github.com/jkhusanov/gatorroom
+
+cd gatorroom
+
+npm run everything
+
+npm run dev
+```
+
+## Feedback
+
+In case you have any feedback or questions, feel free to open a new issue on this repo or reach out to me [**@jkhusanov**](https://github.com/jkhusanov) on Github.
