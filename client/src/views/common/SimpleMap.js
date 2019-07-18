@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { Redirect, withRouter } from 'react-router';
+import axios from 'axios';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 const K_SIZE = 55;
-
-const MAPS_KEY = process.env.REACT_APP_AND_SERVER_GOOGLE_MAPS;
 
 const styles = () => ({
   markerWrap: {},
@@ -103,7 +102,18 @@ class SimpleMap extends Component {
     this.state = {
       toListing: false,
       listingID: null,
+      mapsKey: '',
     };
+  }
+
+  async componentDidMount() {
+    try {
+      const { data } = await axios.get('/api/maps_key');
+      this.setState({ mapsKey: data });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    }
   }
 
   onPinClick = listingID => {
@@ -112,16 +122,16 @@ class SimpleMap extends Component {
 
   render() {
     const { center, zoom, locations, classes } = this.props;
-    const { toListing, listingID } = this.state;
-
+    const { toListing, listingID, mapsKey } = this.state;
     if (toListing === true) {
       return <Redirect push to={`/listings/${listingID}`} />;
     }
+    if (mapsKey.length <= 1) return <div />;
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '80vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: MAPS_KEY }}
+          bootstrapURLKeys={{ key: mapsKey }}
           defaultCenter={center}
           defaultZoom={zoom}
           hoverDistance={K_SIZE / 2}

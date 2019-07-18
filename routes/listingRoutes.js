@@ -66,4 +66,8 @@ module.exports = app => {
       }
     );
   });
+
+  app.get('/api/maps_key', (req, res) => {
+    res.send(keys.googleLatLong);
+  });
 };
