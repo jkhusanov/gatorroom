@@ -3,24 +3,28 @@
   "version": "1.0.0",
   "description": "# This base repo is for Dr. HyoJung Song Class.",
   "main": "index.js",
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "everything": "npm install && npm install --prefix client && npm run build --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false mkdirp ./fileUpload && npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CSC-648-SFSU/csc648-sp19-team103.git"
+    "url": "git+https://github.com/jkhusanov/gatorroom.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CSC-648-SFSU/csc648-sp19-team103/issues"
+    "url": "https://github.com/jkhusanov/gatorroom/issues"
   },
-  "homepage": "https://github.com/CSC-648-SFSU/csc648-sp19-team103#readme",
+  "homepage": "https://github.com/jkhusanov/gatorroom#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
@@ -48,6 +52,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.17.1"
+    "eslint-plugin-import": "^2.17.1",
+    "mkdirp": "^0.5.1"
   }
 }
