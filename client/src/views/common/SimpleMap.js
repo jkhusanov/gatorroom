@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { Redirect, withRouter } from 'react-router';
-import axios from 'axios';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -106,16 +105,6 @@ class SimpleMap extends Component {
     };
   }
 
-  async componentDidMount() {
-    try {
-      const { data } = await axios.get('/api/maps_key');
-      this.setState({ mapsKey: data });
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log(error);
-    }
-  }
-
   onPinClick = listingID => {
     this.setState({ toListing: true, listingID });
   };
@@ -126,7 +115,6 @@ class SimpleMap extends Component {
     if (toListing === true) {
       return <Redirect push to={`/listings/${listingID}`} />;
     }
-    if (mapsKey.length <= 1) return <div />;
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '80vh', width: '100%' }}>
