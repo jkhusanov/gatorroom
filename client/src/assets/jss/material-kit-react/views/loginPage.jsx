@@ -71,6 +71,12 @@ const signupPageStyle = {
     marginBottom: '0px',
     textAlign: 'center',
   },
+  dividerNote: {
+    marginTop: '30px',
+    marginBottom: '0px',
+    textAlign: 'center',
+    color: 'red',
+  },
   cardFooter: {
     paddingTop: '0rem',
     border: '0',

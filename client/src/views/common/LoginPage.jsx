@@ -103,6 +103,10 @@ class LoginPage extends React.Component {
                       </div>
                     </CardHeader>
                     <p className={classes.divider}>Student login with SFSU email</p>
+                    <p className={classes.dividerNote}>
+                      NOTE: only Google signin works on demo app on heroku. Email signup and login
+                      do not work!
+                    </p>
 
                     <CardBody>
                       <CustomInput
@@ -168,4 +172,4 @@ function mapStateToProps({ login }) {
 export default connect(
   mapStateToProps,
   actions
-)((withStyles(loginPageStyle)(LoginPage)));
+)(withStyles(loginPageStyle)(LoginPage));

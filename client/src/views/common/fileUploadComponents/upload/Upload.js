@@ -143,6 +143,9 @@ class Upload extends Component {
     return (
       <div className={classes.upload}>
         <span className={classes.title}>Upload Files</span>
+        <span className={classes.dividerNote}>
+          NOTE: the image upload functionality does not work on demo app on heroku!
+        </span>
         <div className={classes.content}>
           <div>
             <Dropzone

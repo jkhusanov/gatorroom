@@ -26,7 +26,9 @@ function Footer({ ...props }) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        SFSU Software Engineering Project CSC 648-848, Spring 2018. For Demonstration Only.
+        <div className={classes.dividerNote}>
+          SFSU Software Engineering Project CSC 648-848, Spring 2019. For Demonstration Only.
+        </div>
         <br />
         <div className={classes.left}>
           <List className={classes.list}>

@@ -71,6 +71,9 @@ const uploadStyle = {
   buttonDisabled: {
     backgroundColor: 'rgb(189, 189, 189)',
   },
+  dividerNote: {
+    color: 'red',
+  },
 };
 
 export default uploadStyle;

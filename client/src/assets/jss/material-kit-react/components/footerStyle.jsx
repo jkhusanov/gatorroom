@@ -55,5 +55,8 @@ const footerStyle = {
     position: 'relative',
     top: '3px',
   },
+  dividerNote: {
+    color: 'red',
+  },
 };
 export default footerStyle;
