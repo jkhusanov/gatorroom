@@ -10,6 +10,10 @@
   This repo is home for our capstone project in CS class at SFSU.
 </h3>
 
+<h4 align="center">
+https://gatorroom.herokuapp.com
+</h4>
+
 ## My contribution to it
 
 **Frontend lead & fullstack developer**
@@ -32,7 +36,7 @@
 - See listing details with pictures and contact information
 - Admins can approve each new listing before they go live
 
-### [Try it on heroku](https://gatorroom.herokuapp.com) (coming soon!)
+### [Try it on heroku](https://gatorroom.herokuapp.com) (some limitations apply)
 
 ![Demo](https://github.com/jkhusanov/gatorroom/blob/master/Milestones/Demo/Demo.gif)
 
