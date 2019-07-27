@@ -22,6 +22,11 @@ function importAll(r) {
   return images;
 }
 const images = importAll(require.context('../../../../../fileUpload', false, /\.(gif|jpe?g|svg)$/));
+const imagesBackup = [
+  'https://images.unsplash.com/photo-1451934403379-ffeff84932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1284&q=80',
+  'https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80',
+];
 
 class CarouselSection extends React.Component {
   render() {
@@ -41,9 +46,13 @@ class CarouselSection extends React.Component {
             <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
               <Card carousel>
                 <Carousel {...settings}>
-                  {imageData.map(data => (
+                  {imageData.map((data, index) => (
                     <div key={data.img}>
-                      <img src={images[data.img]} alt="First slide" className="slick-image" />
+                      <img
+                        src={images[data.img] || imagesBackup[index]}
+                        alt="First slide"
+                        className="slick-image"
+                      />
                     </div>
                   ))}
                 </Carousel>

@@ -14,7 +14,11 @@ function importAll(r) {
   return images;
 }
 const images = importAll(require.context('../../../../../fileUpload', false, /\.(gif|jpe?g|svg)$/));
-
+const imagesBackup = [
+  'https://images.unsplash.com/photo-1451934403379-ffeff84932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1284&q=80',
+  'https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80',
+];
 const styles = theme => ({
   root: {},
   gridList: {
@@ -83,9 +87,9 @@ const ImageSection = props => {
       </div>
 
       <GridList cellHeight={250} spacing={2} className={classes.gridList} cols={4}>
-        {tileData.map(tile => (
+        {tileData.map((tile, index) => (
           <GridListTile key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 2}>
-            <img src={images[tile.img]} alt={tile.title} />
+            <img src={images[tile.img] || imagesBackup[index]} alt={tile.title} />
           </GridListTile>
         ))}
       </GridList>

@@ -16,6 +16,12 @@ function importAll(r) {
   return images;
 }
 const images = importAll(require.context('../../../../fileUpload', false, /\.(gif|jpe?g|svg)$/));
+const imagesBackup = [
+  'https://images.unsplash.com/photo-1451934403379-ffeff84932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1284&q=80',
+  'https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80',
+  'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+];
 
 const styles = theme => ({
   card: {
@@ -26,6 +32,12 @@ const styles = theme => ({
     objectFit: 'cover',
   },
 });
+
+const getRandomInt = (min, max) => {
+  const minNumber = Math.ceil(min);
+  const maxNumber = Math.floor(max);
+  return Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+};
 
 const ListingInfoCard = props => {
   const {
@@ -48,7 +60,7 @@ const ListingInfoCard = props => {
           className={classes.media}
           height="200"
           width="130"
-          image={images[imageOne]}
+          image={images[imageOne] || imagesBackup[getRandomInt(0, 3)]}
           title={`${address}, ${city}`}
         />
         <CardContent>
